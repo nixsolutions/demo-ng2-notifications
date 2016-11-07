@@ -1,0 +1,18 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.example-container {
+	padding-top: 50px;
+}
+
+.checkbox {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+button {
+	margin-left: 20px;
+}

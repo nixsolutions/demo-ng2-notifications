@@ -1,0 +1,37 @@
+<div class="noty-container">
+	<ul class="r-top-container">
+		<li *ngFor="let props of messages.rt" [@rightRegion]="'in'">
+			<app-noty-item [props]="props" (onItemClose)="onItemClose($event)"></app-noty-item>
+		</li>
+	</ul>
+
+	<ul class="l-top-container">
+		<li *ngFor="let props of messages.lt" [@leftRegion]="'in'">
+			<app-noty-item [props]="props" (onItemClose)="onItemClose($event)"></app-noty-item>
+		</li>
+	</ul>
+
+	<ul class="top-container">
+		<li *ngFor="let props of messages.t" [@topRegion]="'in'">
+			<app-noty-item [props]="props" (onItemClose)="onItemClose($event)"></app-noty-item>
+		</li>
+	</ul>
+
+	<ul class="r-bottom-container">
+		<li *ngFor="let props of messages.rb" [@rightRegion]="'in'">
+			<app-noty-item [props]="props" (onItemClose)="onItemClose($event)"></app-noty-item>
+		</li>
+	</ul>
+
+	<ul class="l-bottom-container">
+		<li *ngFor="let props of messages.lb" [@leftRegion]="'in'">
+			<app-noty-item [props]="props" (onItemClose)="onItemClose($event)"></app-noty-item>
+		</li>
+	</ul>
+
+	<ul class="bottom-container">
+		<li *ngFor="let props of messages.b" [@bottomRegion]="'in'">
+			<app-noty-item [props]="props" (onItemClose)="onItemClose($event)"></app-noty-item>
+		</li>
+	</ul>
+</div>

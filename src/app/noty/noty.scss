@@ -1,0 +1,49 @@
+.noty-container {
+
+	ul {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		min-width: 300px;
+		max-width: 500px;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.r-top-container {
+		right: 0;
+		top: 0;
+	}
+
+	ul.l-top-container {
+		left: 0;
+		top: 0;
+	}
+
+	ul.top-container {
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		top: 0;
+		margin-top: 0;
+	}
+
+	ul.r-bottom-container {
+		right: 0;
+		bottom: 0;
+	}
+
+	ul.l-bottom-container {
+		left: 0;
+		bottom: 0;
+	}
+
+	ul.bottom-container {
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		bottom: 0;
+	}
+}

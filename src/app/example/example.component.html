@@ -1,0 +1,141 @@
+<div class="container example-container">
+	<form (ngSubmit)="onSubmit()" class="form-horizontal">
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-2">Message:</label>
+				<input type="text"
+							 class="form-control col-xs-12 col-sm-10"
+							 [(ngModel)]="config.message"
+							 name="message"
+							 required
+				>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-xs-12">Duration (ms):</label>
+				<input
+					type="number"
+					class="form-control col-xs-12 col-sm-10"
+					name="duration"
+					[(ngModel)]="config.duration"
+				>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-2">Animation:</label>
+				<select
+					class="form-control"
+					name="animation"
+					[(ngModel)]="config.animation"
+				>
+					<option *ngFor="let anim of animations" [value]="anim">
+						{{ anim | capitalize }}
+					</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-2">Type:</label>
+				<select
+					class="form-control"
+					name="type"
+					[(ngModel)]="config.style"
+				>
+					<option *ngFor="let style of notyStyles" [value]="style">
+						{{ style | capitalize }}
+					</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-2">Position:</label>
+				<select
+					class="form-control"
+					name="position"
+					[(ngModel)]="config.position"
+				>
+					<option *ngFor="let pos of notyPositions" [value]="pos">
+						{{ pos | capitalize }}
+					</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="checkbox">
+				<label>
+					<input
+						type="checkbox"
+						name="closable"
+						[(ngModel)]="config.closable"
+					>
+					closable
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input
+						type="checkbox"
+						name="autoClose"
+						[(ngModel)]="config.autoClose"
+					>
+					auto close
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input
+						type="checkbox"
+						name="confirm"
+						[(ngModel)]="config.confirm"
+					>
+					confirmation
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input
+						type="checkbox"
+						name="progressbar"
+						[(ngModel)]="config.progressbar"
+					>
+					show progressbar
+				</label>
+			</div>
+		</div>
+		<div class="col-xs-8 config-wrp">
+
+			<pre>
+&#123;
+  message: '{{config.message}}',<br/>
+  duration: {{config.duration}},<br/>
+  animation: '{{config.animation}}',<br/>
+  closable: {{config.closable}},<br/>
+  style: '{{config.style}}',<br/>
+  autoClose: {{config.autoClose}},<br/>
+  position: {{config.position}},<br/>
+  confirm: {{config.confirm}},<br/>
+  progressbar: {{config.progressbar}},<br/>
+&#125;
+			</pre>
+		</div>
+		<div class="col-xs-12">
+			<button type="button" class="btn btn-info pull-right" (click)="onInfo()">Show Info</button>
+			<button type="button" class="btn btn-success pull-right" (click)="onSuccess()">Show Success</button>
+			<button type="button" class="btn btn-warning pull-right" (click)="onWarning()">Show Warning</button>
+			<button type="button" class="btn btn-danger pull-right" (click)="onError()">Show Error</button>
+			<button type="submit" class="btn btn-primary pull-right">Show Custom Example</button>
+		</div>
+	</form>
+</div>
+

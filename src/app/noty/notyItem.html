@@ -1,0 +1,34 @@
+<div
+	class="noty-item-container {{props.animation}} noty-{{props.style}}"
+	(mouseover)="onMouseOverContainer()"
+	(mouseleave)="onMouseLeaveContainer()"
+	(click)="onCancel($event)"
+>
+	<div class="noty-background opacity noty-{{props.style}}"></div>
+	<span class="noty-icons-wrp {{hoveredConfirm ? 'hovered-confirm' : ''}}">
+		<i
+			class="fa fa-check-circle opacity fa-lg confirm-icon"
+			(mouseover)="onMouseOverConfirm($event)"
+			(mouseleave)="onMouseLeaveConfirm()"
+			(click)="onConfirm($event)"
+			*ngIf="props.confirm"
+		></i>
+		<i class="fa fa-times-circle opacity fa-lg close-icon"></i>
+	</span>
+	<div class="noty-item-body">
+		<span class="noty-body-icon">
+			<i *ngIf="props.style === 'success'" class="fa fa-check-circle"></i>
+			<i *ngIf="props.style === 'error'" class="fa fa-exclamation-circle"></i>
+			<i *ngIf="props.style === 'warning'" class="fa fa-exclamation-circle"></i>
+			<i *ngIf="props.style === 'info'" class="fa fa-info-circle"></i>
+		</span>
+		<div class="not-item-content">
+			<span class="noty-item-message">{{ props.message }}</span>
+		</div>
+	</div>
+	<div
+		class="noty-progress-bar"
+		[style.width]="progress.width"
+		[style.transitionDuration]="progress.duration"
+	></div>
+</div>
